@@ -1,0 +1,52 @@
+$wl-brand-primary: #7070dd;
+$wl-brand-grey: #333;
+
+$grid-gutter-width: 12px;
+$xs-grid-gutter-width: $grid-gutter-width/2;
+
+$font-family-sans-serif:  sans-serif;
+$font-family-serif: serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 12px;
+$headings-font-family: "webcomic", Comic, Comic Sans, sans-serif;
+
+$brand-primary: $wl-brand-primary;
+$link-color: $wl-brand-grey;
+$link-hover-color: $wl-brand-primary;
+$nav-link-hover-bg: #fff;
+
+// Basics of a navbar
+$navbar-height: 30px;
+$navbar-border-radius:             0;
+$navbar-default-color:             $wl-brand-primary;
+$navbar-default-bg:                $wl-brand-primary;
+$navbar-margin-bottom: 0;
+
+// Navbar links
+$navbar-default-link-color:                #ffffff;
+$navbar-default-link-hover-color:          $wl-brand-primary;
+$navbar-default-link-active-color:         $wl-brand-primary;
+$nav-link-padding: 8px;
+
+// Buttons
+$btn-default-color:              #000;
+$btn-default-bg:                 #ffffff;
+$btn-default-border:             #dddddd;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $wl-brand-primary;
+$btn-primary-border:             #ffffff;
+
+$alert-success-bg: #ffffff;
+$alert-success-border: #cdcdcd;
+$alert-success-text: #000;
+$alert-danger-bg: $wl-brand-primary;
+$alert-danger-border: $wl-brand-primary;
+$alert-danger-text: #fff;
+
+$well-bg: #ffffff;
+$well-border: #cdcdcd;
+$border-radius-base: 0px;
+$input-border-focus: $wl-brand-primary;
+
+

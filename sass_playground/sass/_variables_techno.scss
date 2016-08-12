@@ -1,0 +1,62 @@
+$techno-light-grey: #F2F2F2;
+$techno-grey: #dddddd;
+$techno-primary-red: #cf0080;
+
+$wl-brand-primary: $techno-primary-red;
+$wl-brand-grey: $techno-grey;
+
+$grid-gutter-width: 12px;
+$xs-grid-gutter-width: $grid-gutter-width/2;
+
+$font-family-sans-serif: Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 14px;
+$headings-font-family: Arial;
+
+$brand-primary: $techno-primary-red;
+$link-color: #444;
+$link-hover-color: $techno-primary-red;
+$nav-link-hover-bg: #fff;
+
+// Basics of a navbar
+$navbar-border-radius:             0;
+$navbar-default-color:             $techno-primary-red;
+$navbar-default-bg:                $techno-primary-red;
+
+// Navbar links
+$navbar-default-link-color:                #ffffff;
+$navbar-default-link-hover-color:          #ffffff;
+$navbar-default-link-active-color:         #ffffff;
+$nav-link-padding: 8px;
+
+// Tabs
+$nav-tabs-border-color: $techno-grey;
+$nav-tabs-link-hover-border-color: $techno-grey;
+$nav-tabs-active-link-hover-color: #ffffff;
+$nav-tabs-active-link-hover-border-color: $techno-grey;
+$nav-tabs-active-link-hover-bg: $techno-primary-red;
+
+// Buttons
+$btn-default-color:              #000;
+$btn-default-bg:                 #ffffff;
+$btn-default-border:             #dddddd;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 #000;
+$btn-primary-border:             #ccc;
+
+$alert-success-bg: #ffffff;
+$alert-success-border: #dddddd;
+$alert-success-text: #000;
+$alert-danger-bg: $techno-primary-red;
+$alert-danger-border: lighten($techno-primary-red, 5%);
+$alert-danger-text: #fff;
+
+$well-bg: $techno-light-grey;
+$well-border: $techno-grey;
+$border-radius-base: 0px;
+$input-border-focus: $wl-brand-primary;
+
+
+

@@ -1,0 +1,52 @@
+// WL Portal definitions
+$wl-brand-primary: #00ef7c;
+$wl-brand-grey: #c9c9c9;
+
+// bootstrap overrides
+$brand-primary: $wl-brand-primary;
+
+$grid-gutter-width: 12px;
+$xs-grid-gutter-width: $grid-gutter-width/2;
+
+$font-family-sans-serif: Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 12px;
+$headings-font-family: Arial, sans-serif;
+
+$link-color: #444;
+$link-hover-color: $wl-brand-primary;
+$nav-link-hover-bg: #fff;
+
+// Basics of a navbar
+$navbar-height: 40px;
+$navbar-border-radius:             0;
+$navbar-default-color:             #ffffff;
+$navbar-default-bg:                #333333;
+
+// Navbar links
+$navbar-default-link-color:                #ffffff;
+$navbar-default-link-hover-color:          #ffffff;
+$navbar-default-link-active-color:         #ffffff;
+$nav-link-padding: 8px;
+
+// Buttons
+$btn-default-color:              #1a1a1a;
+$btn-default-bg:                 #cdcdcd;
+$btn-default-border:             #cdcdcd;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $wl-brand-primary;
+$btn-primary-border:             $wl-brand-primary;
+
+$alert-success-bg: #ececec;
+$alert-success-border: #c9c9c9;
+$alert-success-text: #000;
+$alert-danger-bg: lighten($wl-brand-primary, 20%);
+$alert-danger-border: $wl-brand-primary;
+$alert-danger-text: #000;
+
+$well-bg: #fff;
+$well-border: #c9c9c9;
+$border-radius-base: 0px;
+$input-border-focus: $wl-brand-primary;
+

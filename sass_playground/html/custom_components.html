@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Components Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+
+    <link href="/stylesheets/techno/styles.css" rel="stylesheet" title="Techno">
+    <link rel="alternate stylesheet" type="text/css" href="/stylesheets/blackMamba/styles.css" title="BlackMamba" disabled="">
+    <link rel="alternate stylesheet" type="text/css" href="/stylesheets/bubbleLand/styles.css" title="BubbleLand" disabled="">
+
+    <!--SELECT BRAND-->
+    <!--<link rel="Shortcut Icon" href="../images/techno/favicon.ico" type="image/x-icon">-->
+    <!--<link rel="Shortcut Icon" href="../images/blackMamba/favicon.ico" type="image/x-icon">-->
+    <!--<link rel="Shortcut Icon" href="../images/bubbleLand/favicon.ico" type="image/x-icon">-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row-offcanvas row-offcanvas-left">
+        <div id="main-canvas">
+            <header>
+                <div class="header-title">
+                    <div class="row">
+                        <div class="inline-vert-top col-xs-2 visible-xs-inline-block">
+                            <a class="btn btn-xs btn-default offcanvas-menu-toggle" data-toggle="offcanvas"><i
+                                    class="glyphicon glyphicon-menu-hamburger"></i></a>
+                        </div><!--
+                        --><div class="inline-vert-bottom col-xs-8 col-sm-5">
+                            <a href="#" rel="home">
+                                <!--SELECT BRAND with data-brand for DEV mode only!-->
+                                <img data-brand="techno" class="img-responsive" src="../images/techno/header-logo.png" alt="Techno Left Logo">
+                                <img data-brand="bubbleLand" class="img-responsive" src="../images/bubbleLand/header-logo.png" alt="BubbleLand Left Logo">
+                                <img data-brand="blackMamba" class="img-responsive" src="../images/blackMamba/header-logo.png" alt="BlackMamba Left Logo">
+                            </a>
+                        </div><!--
+                        --><div class="inline-vert-center col-sm-3 hidden-xs">
+                            <div class="input-group searchbox text-center">
+                                <input type="text" class="form-control" placeholder="Type something!">
+                                <span class="input-group-btn"><button class="btn btn-primary" type="button"><span
+                                        class="glyphicon glyphicon-search"></span></button></span>
+                            </div>
+                        </div><!--
+                        --><div class="inline-vert-bottom col-xs-5 col-sm-4 hidden-xs">
+                            <!--SELECT BRAND with data-brand for DEV mode only!-->
+                            <img data-brand="techno" class="pull-right img-responsive" src="../images/techno/header-logo-right.png">
+                            <img data-brand="blackMamba" class="pull-right img-responsive" src="../images/blackMamba/header-logo-right.png">
+                            <img data-brand="bubbleLand" class="pull-right img-responsive" src="../images/bubbleLand/header-logo-right.png">
+                        </div>
+                    </div>
+                </div>
+
+                <nav id="main-menu" class="navbar navbar-default hidden-xs" role="navigation">
+                    <ul class="menu nav navbar-nav" role="menu">
+                        <li role="menuitem" class="menu-item">
+                            <a href="#">
+                                <span class="item">Home</span><!--Inject with Thymeleaf-->
+                            </a>
+                        </li>
+
+                        <li role="menuitem" class="menu-item">
+                            <a href="#"><!--Inject with Thymeleaf-->
+                                <span class="item">Nice Products</span><!--Inject with Thymeleaf-->
+                            </a>
+                        </li>
+
+                        <li role="menuitem" class="menu-item">
+                            <a href="#"><!--Inject with Thymeleaf-->
+                                <span>Even nicer Products</span><!--Inject with Thymeleaf-->
+                            </a>
+                        </li>
+
+                        <li role="menuitem" class="menu-item">
+                            <a href="/kundencenter/flow/secure/dashboard" target=""><!--Inject with Thymeleaf-->
+                                <span>Login</span><!--Inject with Thymeleaf-->
+                            </a>
+                        </li>
+
+                        <li role="menuitem" class="menu-item">
+                            <a href="/kundencenter/flow/secure/dashboard" target=""><!--Inject with Thymeleaf-->
+                                <span>FAQ</span><!--Inject with Thymeleaf-->
+                            </a>
+                        </li>
+
+                        <li role="menuitem" class="menu-item">
+                            <a href="/kundencenter/flow/secure/dashboard" target="_blank"><!--Inject with Thymeleaf-->
+                                <span>Partners</span><!--Inject with Thymeleaf-->
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="customer-bar" class="clearfix">
+                    <span id="notificationLink"> New message  <span
+                            class="ringing glyphicon glyphicon-envelope"></span></span>
+                <div class="pull-right"><span>Hi Benjamin!</span> | <a href="#">logout</a></div>
+            </div>
+
+            <div id="notificationContainer" style="display: none;">
+                <h4 id="notificationTitle">Messages</h4>
+                <div id="notificationsBody" class="notifications">
+                    <div class="col-xs-12 text-center">
+                        <p>
+                            New Message!
+                        </p>
+                        <a class="btn text-center arrow btn-primary">
+                            <span>Look!</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <main>
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="well">
+                            <h2>Alerts</h2>
+                            <div>
+                                <div class="alert alert-success" role="alert">Lorem ipsum dolor sit amet, consetetur
+                                    sadipscing
+                                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                                    erat,
+                                    sed
+                                    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                                </div>
+                                <div class="alert alert-danger" role="alert"><i
+                                        class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;<strong>Unerwarteter
+                                    Fehler</strong>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                        et
+                                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                        takimata
+                                        sanctus est Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+
+                            <h2>Forms and Controls</h2>
+
+                            <form action="#" class="form-horizontal">
+                                <div class="form-group required">
+                                    <label class="col-sm-2 control-label" for="input">Input Label</label>
+                                    <div class="col-sm-6">
+                                        <input id="input" name="input" class="form-control"
+                                               placeholder="some example input"
+                                               value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group required">
+                                    <div class="col-sm-offset-2 col-sm-6">
+                                        <div class="checkbox"><label> <input type="checkbox"> Inline label: Check me
+                                            out!
+                                            Even my label is
+                                            clickable, WOW!</label></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group required">
+                                    <label class="col-sm-2 control-label" for="input">AGB</label>
+                                    <div class=" col-sm-6">
+                                        <div class="checkbox"><label> <input type="checkbox"> Checkbox with tons of
+                                            text:
+                                            Lorem ipsum dolor sit amet,
+                                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                                            eos
+                                            et
+                                            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                            takimata
+                                            sanctus est Lorem ipsum dolor sit amet. </label></div>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <h3>Buttons</h3>
+                            <div class="form-group">
+                                <button type="submit" class="btn arrow btn-primary"><span>Primary Action</span></button>
+                                <button type="submit" class="btn arrow btn-default"><span>Secondary Action</span>
+                                </button>
+                            </div>
+
+                            <h3>Links</h3>
+                            <div class="form-group">
+                                <a class="underline" href="#">Kennwort vergessen?</a>
+                            </div>
+
+                            <h2>Headlines</h2>
+                            <h1>h1 is not allowed in main content section</h1>
+                            <h2>h2 Usually main Panel Title</h2>
+                            <h3>h3 Side panel title or subtitle</h3>
+                            <h4>h4 subsubtitle only</h4>
+                            <h5>h5 is currently not specified</h5>
+
+                            <h3>Paragraphs</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                et
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                                sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed
+                                diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                                Stet
+                                clita kasd
+                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <h4>Second paragraph</h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                                et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="well">
+                            <h3>Components Page</h3>
+                            <p>
+                                This page gives an impression of the look an feel of the different components that are
+                                used in the Whitelabel Portal UI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer id="site-footer" role="contentinfo">
+                <div class="navbar-inner">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="#"><span>Imprint</span></a></li>
+                        <li><a href="#"><span>Legal</span></a></li>
+                        <li><a href="#"><span>Privacy</span></a></li>
+                        <li><a href="#"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+        <div class="col-xs-6 hidden visible-xs sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <div class="input-group searchbox">
+                        <input type="text" class="form-control" placeholder="Stichwort eingeben">
+                        <span class="input-group-btn"><button class="btn btn-primary" type="button"><span
+                                class="glyphicon glyphicon-search"></span></button></span>
+                    </div>
+                </div>
+                <a href="#" class="list-group-item active">Home</a>
+                <a href="#" class="list-group-item">Nice Products</a>
+                <a href="#" class="list-group-item">Even nicer Products</a>
+                <a href="#" class="list-group-item">Login</a>
+                <a href="#" class="list-group-item">FAQ</a>
+                <a href="#" class="list-group-item">Partners</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footnotes">
+    <a data-toggle="collapse" id="footnotes-toggle" href="#legalNotes" aria-expanded="false" aria-controls="legalNotes">Legal Notes</a>
+    <div class="collapse" id="legalNotes">
+        <p>
+            Some nice preamble.
+        </p>
+        <ul class="nav nav-tabs" data-toggle="tab" role="tablist">
+            <li role="presentation"><a href="#prepaidFootnotes" role="tab" data-toggle="tab">Category A</a></li>
+            <li role="presentation" class="active"><a href="#postpaidFootnotes" role="tab" data-toggle="tab">Category B</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="postpaidFootnotes">
+                <p>Tab 1 </p>
+                <ol start="4">
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                </ol>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="prepaidFootnotes">
+                <p>Tab 2</p>
+                <ol>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et <a href="#">Google</a> et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--DEV ONLY-->
+<div class="row text-center">
+    <a href="#" onclick="setActiveStyleSheet('Techno'); return false;">Techno</a>
+    <a href="#" onclick="setActiveStyleSheet('BlackMamba'); return false;">BlackMamba</a>
+    <a href="#" onclick="setActiveStyleSheet('BubbleLand'); return false;">BubbleLand</a>
+</div>
+<script type="text/javascript" src="/javascripts/styleswitcher.js"></script>
+<!--DEV ONLY END-->
+
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/offcanvas.js"></script>
+<script type="text/javascript" src="/javascripts/notifications.js"></script>
+
+</body>
+</html>
